@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+
+.loader-container {
+  position: fixed; /* Fixes the position relative to the viewport */
+  top: 50%; /* Vertically center */
+  left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background: rgba(255, 255, 255, 0.8); /* Optional background for visibility */
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey background */
+  border-top: 8px solid #3498db; /* Blue spinner */
+  border-radius: 50%;
+  width: 50px; /* Size of the spinner */
+  height: 50px; /* Size of the spinner */
+  animation: spin 1s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
